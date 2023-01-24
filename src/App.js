@@ -2,9 +2,8 @@ import '../src/CSS/App.css';
 
 function App() {
   return (
-    <>
-      <p>LOL</p>
-    </>
+    <div className='app-main'>
+    </div>
   );
 }
 
