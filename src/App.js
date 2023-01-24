@@ -1,11 +1,14 @@
 import '../src/CSS/App.css';
-import bgDesktop from '../src/IMAGES/bg-main-desktop.png';
+import useCardForm from './HOOKS/useCardForm';
 
 function App() {
+
+  const [images] = useCardForm();
+
   return (
     <div className='app-main'>
       <div className='img-back-desktop'>
-        <img src={bgDesktop} />
+        <img src={images.bgDesktop} />
       </div>
     </div>
   );
