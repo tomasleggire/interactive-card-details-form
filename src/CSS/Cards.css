@@ -1,17 +1,51 @@
 .cards-main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 600px;
-    height: 550px;
+    height: 540px;
     z-index: 1;
+    color: white;
+    font-family: monospace;
 }
 
 .card {
     width: 455px;
-    height: 500px;
+    height: 250px;
   background-repeat: no-repeat;
 }
 
 .card-back {
     align-self: flex-end;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.p-front {
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 35px;
+}
+
+.name-front {
+    letter-spacing: 2px;
+}
+
+.info-front {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.span-back {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-right: 55px;
+    margin-bottom: 8px;
 }
