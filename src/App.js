@@ -1,5 +1,6 @@
 import '../src/CSS/App.css';
 import useCardForm from './HOOKS/useCardForm';
+import Cards from './COMPONENTS/Cards';
 
 function App() {
 
@@ -7,8 +8,11 @@ function App() {
 
   return (
     <div className='app-main'>
-      <div className='img-back-desktop'>
-        <img src={images.bgDesktop} />
+      <div className='img-back-desktop' style={{ backgroundImage: `url(${images.bgDesktop})` }}></div>
+      <div className='main-content-container'>
+        <Cards 
+          images={images}
+        />
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+.cards-main {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 550px;
+    z-index: 1;
+}
+
+.card {
+    width: 455px;
+    height: 500px;
+  background-repeat: no-repeat;
+}
+
+.card-back {
+    align-self: flex-end;
+}
