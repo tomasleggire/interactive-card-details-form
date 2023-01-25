@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import '../CSS/Form.css';
 
 export default function Form({setState}) {
+
+    const [statusBtn, setStatusBtn] = useState('Confirm');
+
     return (
         <form className="main-form">
             <label className="name-label">CARDHOLDER NAME</label>
-            <input type='text' placeholder="e.g. Jane Appleseed" className="name-input"/>
+            <input type='text' placeholder="e.g. Jane Appleseed" className="name-input" maxLength='25'/>
             <label className="number-label">CARD NUMBER</label>
             <input type='text' placeholder="e.g. 1234 5678 9123 0000" className="number-input" maxLength='16'/>
             <div className="last-info-main">
@@ -21,6 +24,7 @@ export default function Form({setState}) {
                     <input type='number' className="input-cvc" placeholder="e.g. 123" onInput={(e) => e.target.value = e.target.value.slice(0, 3)} min='0'/>
                 </div>
             </div>
+            <button type="sumbit" className="confirm">{statusBtn}</button>
         </form>
     )
 }
