@@ -1,6 +1,7 @@
 import '../src/CSS/App.css';
 import useCardForm from './HOOKS/useCardForm';
 import Cards from './COMPONENTS/Cards';
+import Form from './COMPONENTS/Form';
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
         <Cards 
           images={images}
           state={state}
+        />
+        <Form
+          setState={setState}
         />
       </div>
     </div>

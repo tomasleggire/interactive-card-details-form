@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import bgDesktop from '../IMAGES/bg-main-desktop.png';
 import bgMobile from '../IMAGES/bg-main-mobile.png';
 import bgCardFront from '../IMAGES/bg-card-front.png';

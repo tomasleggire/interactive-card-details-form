@@ -15,6 +15,12 @@
   background-repeat: no-repeat;
 }
 
+.card-logo-container {
+    width: 85px;
+    height: 85px;
+    margin: 22px 27px;
+}
+
 .card-back {
     align-self: flex-end;
     display: flex;

@@ -6,7 +6,7 @@ export default function Cards({images, state}) {
         <div className="cards-main">
           <div className="card card-front" style={{ backgroundImage: `url(${images.bgCardFront})` }}>
             <div className="card-logo-container">
-              <img src={images.cardLogo}/>
+              <img src={images.cardLogo} alt='Card Logo'/>
             </div>
             <p className="p-front">{state.cardNumber}</p>
             <div className="info-front">

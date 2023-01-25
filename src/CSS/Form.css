@@ -1,0 +1,40 @@
+.main-form {
+    width: 450px;
+    height: auto;
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.name-label, .number-label {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: rgb(78, 19, 78);
+    font-weight: 600;
+}
+
+.name-input, .number-input {
+    padding: 12px 15px;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.name-input::placeholder, .number-input::placeholder {
+    font-family: monospace;
+    color: rgb(168, 166, 166);
+}
+
+.name-input:focus, .number-input:focus {
+    outline: none;
+    border: 1px solid rgb(78, 19, 78);
+    color: rgb(78, 19, 78);
+}
