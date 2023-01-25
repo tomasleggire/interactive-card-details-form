@@ -1,9 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import '../CSS/Form.css';
 
-export default function Form({setState}) {
-
-    const [statusBtn, setStatusBtn] = useState('Confirm');
+export default function Form({setState, setCompleteValue}) {
 
     return (
         <form className="main-form">
@@ -24,7 +22,7 @@ export default function Form({setState}) {
                     <input type='number' className="input-cvc" placeholder="e.g. 123" onInput={(e) => e.target.value = e.target.value.slice(0, 3)} min='0'/>
                 </div>
             </div>
-            <button type="sumbit" className="confirm">{statusBtn}</button>
+            <button type="sumbit" className="confirm" onClick={()=>setCompleteValue(true)}>Confirm</button>
         </form>
     )
 }

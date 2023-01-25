@@ -89,4 +89,5 @@ input[type=number] { -moz-appearance:textfield; }
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
+    margin-top: 20px;
 }

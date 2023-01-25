@@ -5,6 +5,7 @@ import bgCardFront from '../IMAGES/bg-card-front.png';
 import bgCardBack from '../IMAGES/bg-card-back.png';
 
 import cardLogo from '../IMAGES/card-logo.svg';
+import completeLogo from '../IMAGES/icon-complete.svg';
 
 export default function useCardForm() {
 
@@ -14,6 +15,7 @@ export default function useCardForm() {
         bgCardFront: bgCardFront,
         bgCardBack: bgCardBack,
         cardLogo: cardLogo,
+        completeLogo: completeLogo
     }
 
     const [state, setState] = useState({

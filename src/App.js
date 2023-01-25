@@ -1,11 +1,15 @@
+import React, {useState} from 'react';
 import '../src/CSS/App.css';
 import useCardForm from './HOOKS/useCardForm';
 import Cards from './COMPONENTS/Cards';
 import Form from './COMPONENTS/Form';
+import Complete from './COMPONENTS/Complete';
 
 function App() {
 
   const [images, state, setState] = useCardForm();
+
+  const [completeValue, setCompleteValue] = useState(false);
 
   return (
     <div className='app-main'>
@@ -15,9 +19,15 @@ function App() {
           images={images}
           state={state}
         />
-        <Form
-          setState={setState}
-        />
+        {!completeValue ?
+          <Form
+            setState={setState}
+            setCompleteValue={setCompleteValue}
+          />           :
+          <Complete
+            images={images}
+          />
+        }
       </div>
     </div>
   );
