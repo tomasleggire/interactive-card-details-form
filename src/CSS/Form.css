@@ -8,9 +8,9 @@
     font-family: monospace;
 }
 
-.name-label, .number-label {
+.name-label, .number-label, .exp-label {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 5px;
     color: rgb(78, 19, 78);
     font-weight: 600;
@@ -24,13 +24,14 @@
     background: none;
     cursor: pointer;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .name-input::placeholder, .number-input::placeholder {
     font-family: monospace;
-    color: rgb(168, 166, 166);
+    color: rgb(196, 192, 192);
 }
 
 .name-input:focus, .number-input:focus {
@@ -38,3 +39,13 @@
     border: 1px solid rgb(78, 19, 78);
     color: rgb(78, 19, 78);
 }
+
+.last-info-main {
+    outline: auto red;
+}
+
+.exp-date {
+    outline: auto;
+    width: 50%;
+}
+
