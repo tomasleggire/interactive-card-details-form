@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import bgDesktop from '../IMAGES/bg-main-desktop.png';
 import bgMobile from '../IMAGES/bg-main-mobile.png';
 import bgCardFront from '../IMAGES/bg-card-front.png';
@@ -16,5 +16,12 @@ export default function useCardForm() {
         cardLogo: cardLogo,
     }
 
-    return [images];
+    const [state, setState] = useState({
+        cardNumber: '0000 0000 0000 0000',
+        cardName: 'JANE APPLESEED',
+        expiration: '00/00',
+        cardCode: '000',
+    })
+
+    return [images, state, setState];
 }

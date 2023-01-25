@@ -4,7 +4,7 @@ import Cards from './COMPONENTS/Cards';
 
 function App() {
 
-  const [images] = useCardForm();
+  const [images, state, setState] = useCardForm();
 
   return (
     <div className='app-main'>
@@ -12,6 +12,7 @@ function App() {
       <div className='main-content-container'>
         <Cards 
           images={images}
+          state={state}
         />
       </div>
     </div>
