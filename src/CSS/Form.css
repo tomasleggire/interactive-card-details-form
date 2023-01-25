@@ -8,7 +8,7 @@
     font-family: monospace;
 }
 
-.name-label, .number-label, .exp-label {
+.name-label, .number-label, .exp-label, .cvc-label {
     text-align: left;
     font-size: 16px;
     margin-bottom: 5px;
@@ -16,7 +16,7 @@
     font-weight: 600;
 }
 
-.name-input, .number-input {
+.name-input, .number-input, .input-date-mm, .input-date-yy, .input-cvc {
     padding: 12px 15px;
     border: none;
     border: 1px solid lightgray;
@@ -29,23 +29,53 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.name-input::placeholder, .number-input::placeholder {
+.name-input::placeholder, .number-input::placeholder, .input-date-mm::placeholder, .input-date-yy::placeholder, .input-cvc::placeholder {
     font-family: monospace;
     color: rgb(196, 192, 192);
 }
 
-.name-input:focus, .number-input:focus {
+.name-input:focus, .number-input:focus, .input-date-mm:focus, .input-date-yy:focus, .input-cvc:focus {
     outline: none;
     border: 1px solid rgb(78, 19, 78);
     color: rgb(78, 19, 78);
 }
 
 .last-info-main {
-    outline: auto red;
+    display: flex;
 }
 
 .exp-date {
-    outline: auto;
-    width: 50%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.date-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-date-mm, .input-date-yy {
+    width: 95px;
+}
+
+.input-cvc {
+    width: 100%;
+}
+
+.cvc-input-main {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }

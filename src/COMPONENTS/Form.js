@@ -12,9 +12,13 @@ export default function Form({setState}) {
                 <div className="exp-date">
                     <label className="exp-label">{`EXP. DATE (MM/YY)`}</label>
                     <div className="date-inputs">
-                        <input type='text' className="input-date-mm" placeholder="MM" pattern="\d*" maxlength="2"/>
-                        <input type='text' className="input-date-yy" placeholder="YY" pattern="\d*" maxlength="2"/>
+                        <input type='number' className="input-date-mm" placeholder="MM" onInput={(e) => e.target.value = e.target.value.slice(0, 2)} min='1' max='12'/>
+                        <input type='number' className="input-date-yy" placeholder="YY" onInput={(e) => e.target.value = e.target.value.slice(0, 2)} min='22'/>
                     </div>
+                </div>
+                <div className="cvc-input-main">
+                    <label className="cvc-label">CVC</label>
+                    <input type='number' className="input-cvc" placeholder="e.g. 123" onInput={(e) => e.target.value = e.target.value.slice(0, 3)} min='0'/>
                 </div>
             </div>
         </form>
