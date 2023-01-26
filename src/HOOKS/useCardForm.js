@@ -27,11 +27,23 @@ export default function useCardForm() {
 
     const sumbitForm = (e, newState) => {
         e.preventDefault();
-        if (!/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardNumber) && newState.cardNumber.length < 16) {
-            console.log('cardNumber no puede contener letras ni tener menos de 16 numeros');
+        if (newState.cardName.length < 5) {
+            console.log('cardName no puede contener menos de 5 caracteres');
             return;
-        } else if (/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardName && newState.cardName.length < 5)) {
-            console.log('cardName no puede contener numeros ni tener menos de 5 caracteres')
+        } else if (/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardName)) {
+            console.log('cardName no puede contener numeros');
+            return;
+        } else if (newState.cardNumber.length < 16){
+            console.log('cardNumber no puede tener menos de 16 numeros');
+            return;
+        } else if (!/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardNumber)){
+            console.log('cardNumber no puede contener letras');
+            return;
+        } else if (!newState.expiration[0] || !newState.expiration[1]) {
+            console.log('exp. Date no puede estar en blanco');
+        } else if (!newState.cardCode) {
+            console.log('Cvc no puede estar en blanco');
+            return;
         } else {
             console.log(newState);
             setState(newState);
@@ -43,3 +55,4 @@ export default function useCardForm() {
 
     return [images, state, setState, sumbitForm, completeValue,];
 }
+
