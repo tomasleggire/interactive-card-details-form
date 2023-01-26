@@ -7,7 +7,7 @@ import Complete from './COMPONENTS/Complete';
 
 function App() {
 
-  const [images, state, setState] = useCardForm();
+  const [images, state, setState, sumbitForm] = useCardForm();
 
   const [completeValue, setCompleteValue] = useState(false);
 
@@ -22,9 +22,9 @@ function App() {
         />
         {!completeValue ?
           <Form
-            setState={setState}
             setCompleteValue={setCompleteValue}
-          />           :
+            sumbitForm={sumbitForm}
+          />            :
           <Complete
             images={images}
           />

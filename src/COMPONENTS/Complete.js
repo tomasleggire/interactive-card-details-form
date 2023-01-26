@@ -5,7 +5,7 @@ export default function Complete({images}) {
     return (
         <div className="complete-main">
             <div className="complete-logo">
-              <img src={images.completeLogo} />
+              <img src={images.completeLogo} alt='Complete Logo'/>
             </div>
             <h1 className="h1-complete">THANK YOU!</h1>
             <p className="p-complete">We've added your card details.</p>

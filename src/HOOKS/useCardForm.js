@@ -21,9 +21,15 @@ export default function useCardForm() {
     const [state, setState] = useState({
         cardNumber: '0000 0000 0000 0000',
         cardName: 'JANE APPLESEED',
-        expiration: '00/00',
+        expiration: ['00', '00'],
         cardCode: '000',
     })
 
-    return [images, state, setState];
+    const sumbitForm = (e, newState) => {
+        e.preventDefault();
+        console.log(newState);
+        setState(newState);
+    }
+
+    return [images, state, setState, sumbitForm];
 }
