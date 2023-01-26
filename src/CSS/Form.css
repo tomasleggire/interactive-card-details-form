@@ -6,9 +6,6 @@
     flex-direction: column;
     justify-content: center;
     font-family: monospace;
-
-    display: none;
-
 }
 
 .name-label, .number-label, .exp-label, .cvc-label {
@@ -93,4 +90,30 @@ input[type=number] { -moz-appearance:textfield; }
     font-size: 18px;
     cursor: pointer;
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-form {
+        margin: 0;
+        margin-top: 40px;
+        width: 320px;
+    }
+    .name-label, .number-label, .exp-label, .cvc-label {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .name-input, .number-input, .input-date-mm, .input-date-yy, .input-cvc {
+        padding: 8px 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .input-date-mm, .input-date-yy {
+        width: 65px;
+    }
+    .confirm {
+        padding: 15px 0;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
 }

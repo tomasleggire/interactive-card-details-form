@@ -6,9 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    display: none;
-
 }
 
 .complete-logo {
@@ -39,4 +36,26 @@
     font-size: 18px;
     cursor: pointer;
     width: 85%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .complete-main {
+        margin-top: 30px;
+        width: 340px;
+        margin-left: 0;
+    }
+    
+    .complete-logo {
+        margin-bottom: 15px;
+    }
+    
+    .h1-complete {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    
+    .p-complete {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
 }

@@ -60,13 +60,13 @@
     .cards-main {
        justify-content: center;
        align-items:center;
-       width: 450px;
+       max-width: 340px;
        height: auto;
     }
     .card-front {
         order: 2;
         margin: 0 auto 0 0;
-        margin-top: -55px;
+        margin-top: -65px;
     }
     .card-logo-container {
         width: 60px;
