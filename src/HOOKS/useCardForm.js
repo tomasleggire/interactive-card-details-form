@@ -19,7 +19,7 @@ export default function useCardForm() {
     }
 
     const [state, setState] = useState({
-        cardNumber: '0000 0000 0000 0000',
+        cardNumber: '0000000000000000',
         cardName: 'JANE APPLESEED',
         expiration: ['00', '00'],
         cardCode: '000',
@@ -27,9 +27,19 @@ export default function useCardForm() {
 
     const sumbitForm = (e, newState) => {
         e.preventDefault();
-        console.log(newState);
-        setState(newState);
+        if (!/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardNumber) && newState.cardNumber.length < 16) {
+            console.log('cardNumber no puede contener letras ni tener menos de 16 numeros');
+            return;
+        } else if (/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardName && newState.cardName.length < 5)) {
+            console.log('cardName no puede contener numeros ni tener menos de 5 caracteres')
+        } else {
+            console.log(newState);
+            setState(newState);
+            setCompleteValue(true);
+        };
     }
 
-    return [images, state, setState, sumbitForm];
+    const [completeValue, setCompleteValue] = useState(false);
+
+    return [images, state, setState, sumbitForm, completeValue,];
 }

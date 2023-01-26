@@ -27,7 +27,7 @@ export default function Cards({images, state}) {
               state.cardNumber[15] 
             }</p>
             <div className="info-front">
-                <h6 className="name-front">{state.cardName}</h6>
+                <h6 className="name-front">{state.cardName.toUpperCase()}</h6>
                 <span className="span-front">{`${state.expiration[0]}/${state.expiration[1]}`}</span>
             </div>
           </div>

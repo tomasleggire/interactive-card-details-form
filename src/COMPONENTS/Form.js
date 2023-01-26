@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import '../CSS/Form.css';
 
-export default function Form({setCompleteValue, sumbitForm}) {
+export default function Form({sumbitForm}) {
 
     const [newState, setNewState] = useState({
-        cardNumber: '0000 0000 0000 0000',
-        cardName: 'JANE APPLESEED',
-        expiration: ['00', '00'],
-        cardCode: '000',
+        cardNumber: '',
+        cardName: '',
+        expiration: ['', ''],
+        cardCode: '',
     })
 
     return (
