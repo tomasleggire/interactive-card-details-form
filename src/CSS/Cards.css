@@ -12,7 +12,7 @@
 .card {
     width: 455px;
     height: 250px;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 .card-logo-container {
@@ -54,4 +54,51 @@
     letter-spacing: 2px;
     margin-right: 55px;
     margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .cards-main {
+       justify-content: center;
+       align-items:center;
+       width: 450px;
+       height: auto;
+    }
+    .card-front {
+        order: 2;
+        margin: 0 auto 0 0;
+        margin-top: -55px;
+    }
+    .card-logo-container {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        margin-top: 15px;
+        margin-left: 18px;
+    }
+    .p-front {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+    .info-front {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .card {
+        width: 300px;
+        height: 160px;
+        background-size: 300px 160px;
+    }
+    .card-back {
+        align-self: center;
+        order: 1;
+        margin: 0 0 0 auto;
+    }
+    .span-back {
+        font-size: 15px;
+        margin-right: 38px;
+    }
 }

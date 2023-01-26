@@ -14,6 +14,7 @@ function App() {
   return (
     <div className='app-main'>
       <div className='img-back-desktop' style={{ backgroundImage: `url(${images.bgDesktop})` }}></div>
+      <div className='img-back-mobile' style={{ backgroundImage: `url(${images.bgMobile})` }}></div>
       <div className='main-content-container'>
         <Cards 
           images={images}
