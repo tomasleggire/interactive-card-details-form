@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../src/CSS/App.css';
 import useCardForm from './HOOKS/useCardForm';
 import Cards from './COMPONENTS/Cards';
@@ -7,7 +7,7 @@ import Complete from './COMPONENTS/Complete';
 
 function App() {
 
-  const [images, state, setState, sumbitForm, completeValue] = useCardForm();
+  const [images, state, sumbitForm, completeValue, error] = useCardForm();
 
   return (
     <div className='app-main'>
@@ -21,6 +21,7 @@ function App() {
         {!completeValue ?
           <Form
             sumbitForm={sumbitForm}
+            error={error}
           />            :
           <Complete
             images={images}

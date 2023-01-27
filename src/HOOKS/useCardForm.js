@@ -8,6 +8,10 @@ import cardLogo from '../IMAGES/card-logo.svg';
 import completeLogo from '../IMAGES/icon-complete.svg';
 
 export default function useCardForm() {
+    
+    const [completeValue, setCompleteValue] = useState(false);
+
+    const [error, setError] = useState(['','']);
 
     const images = {
         bgDesktop: bgDesktop,
@@ -27,22 +31,24 @@ export default function useCardForm() {
 
     const sumbitForm = (e, newState) => {
         e.preventDefault();
+        setError(['','']);
         if (newState.cardName.length < 5) {
-            console.log('cardName no puede contener menos de 5 caracteres');
+            setError(['cardName', 'type1']);
             return;
-        } else if (/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardName)) {
-            console.log('cardName no puede contener numeros');
+        } else if (!/^[A-Za-z ]+$/.test(newState.cardName)) {
+            setError(['cardName', 'type2']);
             return;
         } else if (newState.cardNumber.length < 16){
-            console.log('cardNumber no puede tener menos de 16 numeros');
+            setError(['cardNumber', 'type1']);
             return;
         } else if (!/^[0-9]*(\.?)[ 0-9]+$/.test(newState.cardNumber)){
-            console.log('cardNumber no puede contener letras');
+            setError(['cardNumber', 'type2']);
             return;
         } else if (!newState.expiration[0] || !newState.expiration[1]) {
-            console.log('exp. Date no puede estar en blanco');
+            setError(['expiration', 'type1']);
+            return;
         } else if (!newState.cardCode) {
-            console.log('Cvc no puede estar en blanco');
+            setError(['cvc', 'type1']);
             return;
         } else {
             console.log(newState);
@@ -51,8 +57,7 @@ export default function useCardForm() {
         };
     }
 
-    const [completeValue, setCompleteValue] = useState(false);
 
-    return [images, state, setState, sumbitForm, completeValue,];
+    return [images, state, sumbitForm, completeValue, error];
 }
 
